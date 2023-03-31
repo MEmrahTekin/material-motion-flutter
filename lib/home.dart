@@ -345,7 +345,7 @@ class _AnimatedBottomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var fadeOut = Tween<double>(begin: 1, end: -1).animate(
+    var fadeOut = Tween<double>(begin: 1, end: 0).animate(
       drawerController.drive(CurveTween(curve: standardEasing)),
     );
 
