@@ -173,7 +173,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         listen: false,
       ).bottomDrawerVisible = true;
       _drawerController.animateTo(0.4, curve: standardEasing);
-      _dropArrowController.animateTo(0.35, curve: standardEasing);
+      _dropArrowController.animateTo(0.75, curve: standardEasing);
       return;
     }
 
@@ -203,10 +203,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         details.velocity.pixelsPerSecond.dy / _bottomDrawerHeight;
 
     if (flingVelocity < 0.0) {
+      print(flingVelocity);
       _drawerController.fling(
         velocity: math.max(_kFlingVelocity, -flingVelocity),
       );
     } else if (flingVelocity > 0.0) {
+      print(flingVelocity);
       _dropArrowController.forward();
       _drawerController.fling(
         velocity: math.min(-_kFlingVelocity, -flingVelocity),

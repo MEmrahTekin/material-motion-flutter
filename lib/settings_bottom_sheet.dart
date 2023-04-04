@@ -9,7 +9,7 @@ extension AnimationSpeedSettingExtension on SlowMotionSpeedSetting {
   double get value {
     switch (this) {
       case SlowMotionSpeedSetting.normal:
-        return 1.0;
+        return 10.0;
       case SlowMotionSpeedSetting.slow:
         return 5.0;
       case SlowMotionSpeedSetting.slower:
