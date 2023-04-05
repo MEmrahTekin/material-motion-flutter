@@ -171,7 +171,7 @@ class EmailStore with ChangeNotifier {
   bool _bottomDrawerVisible = false;
   ThemeMode _currentTheme = ThemeMode.system;
   SlowMotionSpeedSetting _currentSlowMotionSpeed =
-      SlowMotionSpeedSetting.normal;
+      SlowMotionSpeedSetting.slower;
 
   Map<String, Set<Email>> get emails =>
       Map<String, Set<Email>>.unmodifiable(_categories);
